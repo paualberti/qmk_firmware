@@ -29,22 +29,7 @@
        ES_G    , ES_X    , ES_C    , ES_D    , ES_V    ,      ES_B    , ES_H    , ES_COMM , ES_SCLN , ES_DOT  ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     LT_SPC  , LT_TAB  ,      MT_ENT  , LT_BSPC
-/*                                 `-------------------'    `-------------------'                                 */
-
-#define _MAJ_LAYOUT \
-/*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   | P       | L       | W       | M       | Q       |    | Z       | F       | O       | U       | "       |   */\
-       S(ES_P) , S(ES_L) , S(ES_W) , S(ES_M) , S(ES_Q) ,      S(ES_Z) , S(ES_F) , S(ES_O) , S(ES_U) , ES_DQUO ,     \
-/*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   | Y       | R       | S       | T       | K       |    | J       | N       | A       | E       | I       |   */\
-       S(ES_Y) , S(ES_R) , S(ES_S) , S(ES_T) , S(ES_K) ,      S(ES_J) , S(ES_N) , S(ES_A) , S(ES_E) , S(ES_I) ,     \
-/*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   | Z       | X       | C       | D       | V       |    | K       | H       | <       | :       | >       |   */\
-       S(ES_G) , S(ES_X) , S(ES_C) , S(ES_D) , S(ES_V) ,      S(ES_B) , S(ES_H) , ES_LABK , ES_COLN , ES_RABK ,     \
-/*   `-------------------------------------------------|    |-------------------------------------------------'   */\
-/*                                 |         |         |    |         |         |                                 */\
-                                     LT_SPC  , KC_NO   ,      MT_ENT  , LT_BSPC
+                                     LT_SPC  , MT_TAB  ,      MT_ENT  , LT_BSPC
 /*                                 `-------------------'    `-------------------'                                 */
 
 #define _QWTY_LAYOUT \
@@ -59,51 +44,51 @@
        ES_Z    , ES_X    , ES_C    , ES_V    , ES_B    ,      ES_N    , ES_M    , ES_COMM , ES_DOT  , ES_MINS ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     LT_SPC  , KC_LSFT ,      KC_RCTL , LT_BSPC
+                                     LT_SPC  , MT_TAB  ,      MT_ENT  , LT_BSPC
 /*                                 `-------------------'    `-------------------'                                 */
 
 #define _NUM_LAYOUT \
 /*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   |         |         | Ç       | Ñ       |         |    | INS     | 7       | 8       | 9       |         |   */\
-       KC_NO   , KC_NO   , ES_CCED , ES_NTIL , KC_NO   ,      KC_INS  , KC_7    , KC_8    , KC_9    , KC_NO   ,     \
+/*   | DEL     | ·       | Ç       | Ñ       | /       |    | -       | 7       | 8       | 9       | "       |   */\
+       KC_DEL  , ES_BULT , ES_CCED , ES_NTIL , ES_SLSH ,      ES_MINS , KC_7    , KC_8    , KC_9    , ES_DQUO ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   |         | ¨       | `       | ´       |         |    |         | 4       | 5       | 6       | 0       |   */\
-       KC_NO   , ES_DIAE , ES_GRV  , ES_ACUT , KC_NO   ,      KC_NO   , KC_4    , KC_5    , KC_6    , KC_0    ,     \
+/*   |         | ¨       | `       | ´       | *       |    | +       | 4       | 5       | 6       |         |   */\
+       KC_NO   , ES_DIAE , ES_GRV  , ES_ACUT , ES_ASTR ,      ES_PLUS , KC_4    , KC_5    , KC_6    , KC_ENT  ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   |         | ·       | ¿       | ¡       |         |    |         | 1       | 2       | 3       |         |   */\
-       KC_NO   , ES_BULT , ES_IQUE , ES_IEXL , KC_SPC  ,      KC_NO   , KC_1    , KC_2    , KC_3    , KC_DOT  ,     \
+/*   | (       | )       | ¿       | ¡       |         |    |         | 1       | 2       | 3       |         |   */\
+       ES_LPRN , ES_RPRN , ES_IQUE , ES_IEXL , KC_NO   ,      KC_NO   , KC_1    , KC_2    , KC_3    , KC_DOT  ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     KC_NO   , KC_NO   ,      OSM_ALT , MO_NAV
+                                     KC_NO   , KC_NO   ,      MT_ZERO , LT_ESC
 /*                                 `-------------------'    `-------------------'                                 */
 
 #define _SIM_LAYOUT \
 /*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   | ESC     | @       | #       | $       | %       |    | ^       | &       | *       | BSPC    | DEL     |   */\
-       KC_ESC  , ES_AT   , ES_HASH , ES_DLR  , ES_PERC ,      ES_CIRC , ES_AMPR , ES_ASTR , KC_BSPC , KC_DEL  ,     \
+/*   | €       | @       | #       | $       | %       |    | ^       | &       | *       | !       | "       |   */\
+       ES_EUR  , ES_AT   , ES_HASH , ES_DLR  , ES_PERC ,      ES_CIRC , ES_AMPR , ES_ASTR , ES_EXLM , ES_DQUO ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   | TAB     | =       | _       | -       | +       |    | \       | (       | )       | |       | ENT     |   */\
-       KC_TAB  , ES_EQL  , ES_UNDS , ES_MINS , ES_PLUS ,      ES_BSLS , ES_LPRN , ES_RPRN , ES_PIPE , KC_ENT  ,     \
+/*   | ?       | =       | _       | -       | +       |    | \       | (       | )       | |       | DEL     |   */\
+       ES_QUES , ES_EQL  , ES_UNDS , ES_MINS , ES_PLUS ,      ES_BSLS , ES_LPRN , ES_RPRN , ES_PIPE , KC_DEL  ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
-/*   | S_TAB   | /       | ?       | !       | ~       |    | [       | {       | }       | ]       |         |   */\
-       S_TAB   , ES_SLSH , ES_QUES , ES_EXLM , ES_TILD ,      ES_LBRC , ES_LCBR , ES_RCBR , ES_RBRC , ES_EUR  ,     \
+/*   | LCTL    | /       | <       | >       | ~       |    | [       | {       | }       | ]       | :       |   */\
+       KC_LCTL , ES_SLSH , ES_LABK , ES_RABK , ES_TILD ,      ES_LBRC , ES_LCBR , ES_RCBR , ES_RBRC , ES_COLN ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     MO_NAV  , OSM_CTL ,      KC_NO   , KC_NO
+                                     LT_ESC  , S_TAB   ,      KC_NO   , KC_NO
 /*                                 `-------------------'    `-------------------'                                 */
 
 #define _NAV_LAYOUT \
 /*   ,-------------------------------------------------.    ,-------------------------------------------------.   */\
-/*   |         | RGHT    | CT_RGHT | END     | BOOT    |    | BOOT    | FIND    |         | PGUP    | VOLU    |   */\
-       KC_NO   , KC_RGHT , CT_RGHT , KC_END  , QK_BOOT ,      QK_BOOT , KC_FIND , KC_NO   , KC_PGUP , KC_VOLU ,     \
+/*   | PSCR    | RGHT    | CT_RGHT | END     | BOOT    |    | BOOT    | FIND    |         | PGUP    | VOLU    |   */\
+       KC_PSCR , KC_RGHT , CT_RGHT , KC_END  , QK_BOOT ,      QK_BOOT , KC_FIND , KC_NO   , KC_PGUP , KC_VOLU ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   |         |         | HOME    |         | UP      |    | DOWN    |         | WBAK    | WFWD    | VOLD    |   */\
-       TO_HOME , KC_NO   , KC_HOME , KC_NO   , KC_UP   ,      KC_DOWN , KC_NO   , KC_WBAK , KC_WFWD , KC_VOLD ,     \
+       KC_NO   , KC_NO   , KC_HOME , KC_NO   , KC_UP   ,      KC_DOWN , KC_NO   , KC_WBAK , KC_WFWD , KC_VOLD ,     \
 /*   |-------------------------------------------------|    |-------------------------------------------------|   */\
 /*   |         |         |         | PGDN    |         |    | CT_LEFT | LEFT    |         |         |         |   */\
        TO_QWTY , KC_NO   , KC_NO   , KC_PGDN , KC_NO   ,      CT_LEFT , KC_LEFT , KC_NO   , KC_NO   , TO_HOME ,     \
 /*   `-------------------------------------------------|    |-------------------------------------------------'   */\
 /*                                 |         |         |    |         |         |                                 */\
-                                     KC_NO   , OSM_CTL ,      OSM_ALT , KC_NO
+                                     KC_NO   , KC_NO   ,      KC_NO   , KC_NO
 /*                                 `-------------------'    `-------------------'                                 */
 
